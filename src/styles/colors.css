@@ -1,0 +1,117 @@
+:root {
+  font-family: "Chakra Petch", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Gradient Colors */
+  --bothub-gradient-start: #00ec97;
+  --bothub-gradient-end: #008c56;
+  --additional-gradient-start: #2c2c3a;
+  --additional-gradient-end: #3c3c53;
+  --additional-gradient-20-start: #14141a;
+  --additional-gradient-20-end: #21212b;
+
+  /* Neutral Colors */
+  --neutral-800: #17171e;
+  --neutral-700: #14141a;
+  --neutral-600: #1f1f29;
+  --neutral-500: #282834;
+  --neutral-400: #313140;
+  --neutral-300: #3a3a48;
+  --neutral-200: #5a5a63;
+  --neutral-100: #81818b;
+  --neutral-50: #9f9fae;
+  --neutral-white-100: #efeff3;
+
+  /* Accent Colors */
+  --accent-700: #20c98c;
+  --accent-600: #0d0f94;
+  --accent-500: #00ec97;
+  --accent-400: #33f0ac;
+  --accent-300: #54f2b9;
+  --accent-200: #8af6cf;
+  --accent-100: #b0f9df;
+  --accent-50: #e6fdf5;
+  --accent-800: #152625;
+  --accent-900: #151d20;
+  --accent-disabled: #378e71;
+}
+
+/* Tailwind CSS v4 Theme Configuration */
+@theme {
+  /* Custom Colors */
+  --color-bothub-start: #00ec97;
+  --color-bothub-end: #008c56;
+  --color-additional-start: #2c2c3a;
+  --color-additional-end: #3c3c53;
+  --color-additional-20-start: #14141a;
+  --color-additional-20-end: #21212b;
+
+  /* Neutral Scale */
+  --color-neutral-800: #17171e;
+  --color-neutral-700: #14141a;
+  --color-neutral-600: #1f1f29;
+  --color-neutral-500: #282834;
+  --color-neutral-400: #313140;
+  --color-neutral-300: #3a3a48;
+  --color-neutral-200: #5a5a63;
+  --color-neutral-100: #81818b;
+  --color-neutral-50: #9f9fae;
+  --color-neutral-white: #efeff3;
+
+  /* Accent Scale */
+  --color-accent-900: #151d20;
+  --color-accent-800: #152625;
+  --color-accent-700: #20c98c;
+  --color-accent-600: #0d0f94;
+  --color-accent-500: #00ec97;
+  --color-accent-400: #33f0ac;
+  --color-accent-300: #54f2b9;
+  --color-accent-200: #8af6cf;
+  --color-accent-100: #b0f9df;
+  --color-accent-50: #e6fdf5;
+  --color-accent-disabled: #378e71;
+
+  /* Gradient Definitions */
+  --gradient-bothub: linear-gradient(
+    135deg,
+    var(--color-bothub-start) 0%,
+    var(--color-bothub-end) 100%
+  );
+  --gradient-additional: linear-gradient(
+    135deg,
+    var(--color-additional-start) 0%,
+    var(--color-additional-end) 100%
+  );
+  --gradient-additional-20: linear-gradient(
+    135deg,
+    var(--color-additional-20-start) 0%,
+    var(--color-additional-20-end) 100%
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    var(--color-accent-700) 0%,
+    var(--color-accent-500) 50%,
+    var(--color-accent-300) 100%
+  );
+}
+
+/* Alternative: Use @layer base for global CSS variables */
+@layer base {
+  :root {
+    --bothub-gradient-start: #00ec97;
+    --bothub-gradient-end: #008c56;
+    --additional-gradient-start: #2c2c3a;
+    --additional-gradient-end: #3c3c53;
+    --additional-gradient-20-start: #14141a;
+    --additional-gradient-20-end: #21212b;
+  }
+}

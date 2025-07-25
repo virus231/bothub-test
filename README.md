@@ -1,69 +1,64 @@
-# React + TypeScript + Vite
+# 🔔 Notifications Pop-up Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React TypeScript application featuring an interactive notifications system with inbox and read states.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **🔔 Notifications Pop-up**: Interactive component with inbox/read state management
+- **📋 Segment Control**: Tab switching between Inbox and Read with notification counts
+- **📝 Notification Items**: Rich notification display with icons, timestamps, and interactive elements
+- **🔄 State Management**: Move notifications between states with animated transitions
+- **📱 Responsive Design**: Mobile-first design with Tailwind CSS v4
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **⚛️ React 18** with TypeScript
+- **⚡ Vite** with SWC for fast compilation
+- **🎨 Tailwind CSS v4** with Vite plugin integration
+- **🎯 Material Symbols** for icons
+- **🔤 Chakra Petch** font family
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Development
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+```bash
+# Install dependencies
+pnpm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Start development server
+pnpm dev
+
+# Build for production  
+pnpm build
+
+# Run linting
+pnpm lint
+
+# Preview production build
+pnpm preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧩 Component Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **🔔 NotificationsPopup**: Main container component with state management
+- **📋 SegmentControl**: Tab switcher for Inbox/Read states
+- **📝 NotificationItem**: Individual notification display component
+- **🔘 SecondaryButton**: Reusable button component
+- **🎯 IconButton**: Icon-based button component
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Functionality
+
+### 📥 Inbox Tab
+- Displays new/unread notifications
+- "Mark all as read" button moves all notifications to Read tab
+- Shows notification count in tab header
+
+### 📖 Read Tab  
+- Displays read notifications
+- "Clear all" button removes all read notifications
+- Shows notification count in tab header
+
+### 📋 Notification Types
+- **📢 Standard notifications** with icon, title, description, and timestamp
+- **💰 Price notifications** with monetary values
+- **⬆️ Upgrade prompts** with call-to-action buttons
+- **🖼️ Image attachments** support
