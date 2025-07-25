@@ -1,5 +1,5 @@
-import { Icon } from "@/../components";
-import { Button } from "@/button";
+import { Button } from "./button";
+import { Icon } from "./icon";
 
 interface IconSecondaryButtonProps {
   icon: string;
